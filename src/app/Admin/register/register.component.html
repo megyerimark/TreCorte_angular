@@ -1,1 +1,30 @@
-<p>register works!</p>
+<footer>
+
+  <form class="register" [formGroup]="form" (ngSubmit)="register()">
+    <h1>Admin regisztárció </h1>
+
+    <div class="container">
+      <div class="name">
+        <label for="">Név</label>
+        <input type="text"  placeholder="Teljes neved"   formControlName="name">
+      </div>
+      <div class="email">
+        <label for="">Email</label>
+      <input type="email"  placeholder="Email" formControlName="email">
+      </div>
+      <div class="password">
+        <label for="">Jelszó</label>
+      <input type="password"    placeholder="jelszó" formControlName="password">
+      </div>
+      <div class="password_2">
+        <label for="">Jelszó megerősítő</label>
+      <input type="password"   placeholder="Jelszó megerősítő" formControlName="confirm_password">
+      </div>
+      <div class="btn">
+        <button type="submit" class="btn   px-5 py-2">Regisztráció</button>
+      </div>
+    </div>
+    </form>
+
+
+</footer>
