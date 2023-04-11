@@ -1,1 +1,20 @@
-<p>login works!</p>
+<form class="register" [formGroup]="form" (ngSubmit)="alogin()">
+  <h1>Admin</h1>
+
+  <div class="container">
+    <div class="email">
+      <label for="">Email</label>
+      <input type="email"  placeholder="email" formControlName="email">
+      </div>
+      <div class="password">
+        <label for="">Jelszó</label>
+        <input type="password"  placeholder="Jelszó"   formControlName="password">
+        </div>
+        <div class="btn">
+        <button type="submit">Belépés</button>
+        </div>
+  </div>
+
+
+
+  </form>

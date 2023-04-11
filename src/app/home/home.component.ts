@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+
+  homer= false;
+
+  home(){
+  this.homer = !this.homer;
+  }
+ show(){
+
+ }
 }

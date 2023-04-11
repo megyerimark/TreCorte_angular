@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  host ="http://localhost:8000/api/";
+  host = "http://localhost:8000/api/";
 
   constructor( private http:HttpClient) { }
 
@@ -47,12 +47,13 @@ export class AuthService {
     let url = this.host  + endpoint;
     return this.http.post<any>(url,regdata,httpOption)
   }
+
   logout(){
-    if(localStorage.getItem('currentUser') === null){
+    if(localStorage.getItem('currentAdmin') === null){
       return;
     }
-    let data:any = localStorage.getItem('currentUser');
-    localStorage.removeItem('currentUser');
+    let data:any = localStorage.getItem('currentAdmin');
+    localStorage.removeItem('currentAdmin');
     let currentUser = JSON.parse(data);
     let token = currentUser.token;
     let httpHeaders = new HttpHeaders();
@@ -66,10 +67,10 @@ export class AuthService {
     return this.http.post<any>(url, httpOptions);
 }
 isLoggedIn(){
-  if(localStorage.getItem('currentUser') === null){
+  if(localStorage.getItem('currentAdmin') === null){
     return false;
   }
-  let data:any = localStorage.getItem('currentUser');
+  let data:any = localStorage.getItem('currentAdmin');
   let userData = JSON.parse(data);
   let token = userData.token;
   return token;

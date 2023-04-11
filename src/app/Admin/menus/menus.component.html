@@ -1,0 +1,33 @@
+<app-admin
+></app-admin>
+<form [formGroup]="form" (ngSubmit)="uploadFile()">
+  <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
+  <input type="text" placeholder="név" formControlName="name" class="form-control" >
+  <input type="text" placeholder="ár" formControlName="price" class="form-control" >
+  <input type="text" placeholder="kategória_ID" formControlName="category_id" class="form-control" >
+
+  <input type="text"  class="form-control" placeholder="leírás" formControlName="description">
+  <div class="button mb-3 text-center">
+    <button id="button" class="btn btn-info" type="submit" >Felvétel</button>
+  </div>
+</form>
+
+
+
+
+
+
+  <div class="container" *ngFor = 'let menu of menus'>
+    <div class="card">
+      <td>
+        <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
+      </td>
+      <div class="imgBx" data-text="Megyeri">
+        <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
+        <td>{{menu.id}}</td><br>
+        <td>kategória_ID  : {{menu.category_id}}</td>
+      </div>
+    </div>
+  </div>
+
+

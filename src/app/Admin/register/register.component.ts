@@ -42,7 +42,7 @@ export class RegisterComponent {
        next : data =>{
         this.toastr.success("Sikeres regisztráció")
         localStorage.setItem('newAuthAdminData', JSON.stringify(data));
-        //this.router.navigate(['admin/login']);
+        this.router.navigate(['admin/login']);
        },
 
        error: err => {

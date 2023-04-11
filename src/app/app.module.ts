@@ -11,6 +11,10 @@ import { RegisterComponent } from './Admin/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from './Admin/category/category.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AdminNAVComponent } from './Admin/admin-nav/admin-nav.component';
+import { MenusComponent } from './Admin/menus/menus.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryComponent,
+    NavbarComponent,
+    AdminNAVComponent,
+    MenusComponent
   ],
   imports: [
     BrowserModule,
