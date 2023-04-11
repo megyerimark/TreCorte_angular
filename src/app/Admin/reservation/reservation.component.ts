@@ -51,7 +51,7 @@ reservations: any;
 
 
 
-
+success!:any;
     reservation(){
 
       let  first_name = this.form.value.first_name;
@@ -64,7 +64,9 @@ reservations: any;
       this.reservationServ.store(first_name,last_name,email,tel_number,
         res_date,guest_number).subscribe({
           next : data =>{
-            this.toastr.success("Sikeres foglalás")
+            this.toastr.success("Sikeres foglalás");
+            this.success=true;
+
 
           },
           error:err =>{
