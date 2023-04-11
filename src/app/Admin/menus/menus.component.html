@@ -2,9 +2,10 @@
 ></app-admin>
 <form [formGroup]="form" (ngSubmit)="uploadFile()">
   <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
+
   <input type="text" placeholder="név" formControlName="name" class="form-control" >
-  <input type="text" placeholder="ár" formControlName="price" class="form-control" >
-  <input type="text" placeholder="kategória_ID" formControlName="category_id" class="form-control" >
+  <input type="number" placeholder="ár" formControlName="price" class="form-control" >
+  <input type="text" placeholder="kategória" formControlName="category_id" class="form-control" >
 
   <input type="text"  class="form-control" placeholder="leírás" formControlName="description">
   <div class="button mb-3 text-center">
@@ -25,7 +26,8 @@
       <div class="imgBx" data-text="Megyeri">
         <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
         <td>{{menu.id}}</td><br>
-        <td>kategória_ID  : {{menu.category_id}}</td>
+        <td>{{menu.name}}</td><br>
+        <td>kategória neve  : {{menu.category_name}}</td>
       </div>
     </div>
   </div>

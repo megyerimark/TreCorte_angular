@@ -15,6 +15,9 @@ import { CategoryComponent } from './Admin/category/category.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminNAVComponent } from './Admin/admin-nav/admin-nav.component';
 import { MenusComponent } from './Admin/menus/menus.component';
+import { ReservationComponent } from './Admin/reservation/reservation.component';
+import { AdminresdataComponent } from './Admin/reservation/adminresdata/adminresdata.component';
+import { AdminupdatdataComponent } from './Admin/reservation/adminresdata/adminupdatdata/adminupdatdata.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MenusComponent } from './Admin/menus/menus.component';
     CategoryComponent,
     NavbarComponent,
     AdminNAVComponent,
-    MenusComponent
+    MenusComponent,
+    ReservationComponent,
+    AdminresdataComponent,
+    AdminupdatdataComponent
   ],
   imports: [
     BrowserModule,

@@ -15,11 +15,12 @@ export class MenusComponent {
 
   currentUser: any;
 
-  menus!:any;
+
     form!:FormGroup;
+  menus: any;
     constructor(
       private auth :AuthService,
-      private menuss: MenuService,
+      private menuservice: MenuService,
       private router:Router,
       private toastr: ToastrService,
       private http:HttpClient,
@@ -28,6 +29,7 @@ export class MenusComponent {
         this.form = this.formBuild.group({
           file:null,
           name:['', Validators.required],
+          id:['', Validators.required],
           image:['', Validators.required],
           description:['', Validators.required],
           price:['', Validators.required],
@@ -40,6 +42,7 @@ export class MenusComponent {
         this.form = this.formBuild.group({
           file:null,
           name:['', Validators.required],
+          id:['', Validators.required],
           image:['', Validators.required],
           description:['', Validators.required],
           price:['', Validators.required],
@@ -50,7 +53,7 @@ export class MenusComponent {
       index(){
         let jsonUserData: any = localStorage.getItem('currentAdmin');
         let currentUser = JSON.parse(jsonUserData);
-        this.menuss.index(currentUser.token).subscribe({
+        this.menuservice.index(currentUser.token).subscribe({
           next:res=>{
             this.menus = res;
           }
@@ -79,7 +82,12 @@ uploadFile() {
   formData.append('description', this.form.value.description);
   formData.append('price', this.form.value.price);
   formData.append('category_id', this.form.value.category_id);
-  this.menuss.store(currentUser.token, formData).subscribe({
+
+
+
+  this.menuservice.store(currentUser.token, formData).subscribe({
+
+
     next: res =>{
      this.toastr.success("Sikeres feltöltés");
      this.index();
@@ -91,20 +99,21 @@ uploadFile() {
 })
     }
 
-
     Delete(id:any){
       let jsonUserData: any = localStorage.getItem('currentAdmin');
       let currentUser = JSON.parse(jsonUserData);
-      this.menuss.Delete(id, currentUser.token).subscribe({
-        next: res => {
-          this.toastr.info("TÖRÖLVE");
+      this.menuservice.Destroy(id, currentUser.token).subscribe({
+        next:res=>{
+         this.toastr.warning("TÖRÖLVE")
           this.index();
         },
-        error: err => {
-          this.toastr.error("Sikertelen törlés");
+        error:err =>{
+          this.toastr.error("Sikertelen törlés")
+
         }
-      });
+      })
     }
+
 
 
 

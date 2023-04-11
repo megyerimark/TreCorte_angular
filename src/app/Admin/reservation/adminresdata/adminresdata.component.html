@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Vezetéknév</th>
+      <th scope="col">Keresztnév</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefonszám</th>
+      <th scope="col">Vendégekszáma</th>
+      <th scope="col">Dátum</th>
+      <th scope="col">Műveletek</th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let res of reservations'>
+    <tr>
+      <th scope="row">{{res.id}}</th>
+      <td>{{res.first_name}}</td>
+      <td>{{res.last_name}}</td>
+      <td>{{res.email}}</td>
+      <td>{{res.tel_number}}</td>
+      <td>{{res.guest_number}}</td>
+      <td>{{res.res_date}}</td>
+      <td>
+        <button class="btn btn-info" (click)="Delete(res.id)">Törlés</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class MenuService {
 
+
   host = 'http://localhost:8000/api/';
 
   constructor(private http: HttpClient) { }
@@ -39,18 +40,20 @@ export class MenuService {
 
 
 
-  Delete(id: any, token: string) {
-    const headers = new HttpHeaders({
+  Destroy(id:any , token:string){
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token
-    });
-
-    const httpOptions = {
+    })
+    let httpOption = {
       headers: headers
     };
 
-    const endpoint = "deletemenus/";
-    const url = this.host + endpoint;
-    return this.http.delete<any>(url + id, httpOptions);
+    let endpoint="destroyMenus/";
+    let url = this.host + endpoint;
+    return this.http.delete<any>(url +id, httpOption);
   }
+
+
+
 }
