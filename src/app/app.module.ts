@@ -17,8 +17,7 @@ import { AdminNAVComponent } from './Admin/admin-nav/admin-nav.component';
 import { MenusComponent } from './Admin/menus/menus.component';
 import { ReservationComponent } from './Admin/reservation/reservation.component';
 import { AdminresdataComponent } from './Admin/reservation/adminresdata/adminresdata.component';
-import { AdminupdatdataComponent } from './Admin/reservation/adminresdata/adminupdatdata/adminupdatdata.component';
-
+import { MenuindexComponent } from './home/menuindex/menuindex.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +31,8 @@ import { AdminupdatdataComponent } from './Admin/reservation/adminresdata/adminu
     MenusComponent,
     ReservationComponent,
     AdminresdataComponent,
-    AdminupdatdataComponent
+    MenuindexComponent,
+
   ],
   imports: [
     BrowserModule,

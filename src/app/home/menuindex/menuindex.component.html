@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+
+
+
+<div class="container" *ngFor = 'let menu of menus'>
+  <div class="card">
+    <div class="imgBx" data-text="Megyeri">
+      <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="{{menu.name}}" height="150px">
+      <td>{{menu.id}}</td><br>
+      <td>{{menu.name}}</td><br>
+      <td>kategória neve  : {{menu.elnevez}}</td>
+    </div>
+  </div>
+</div>
+
+
+

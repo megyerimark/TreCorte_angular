@@ -51,9 +51,7 @@ export class MenusComponent {
         })
       }
       index(){
-        let jsonUserData: any = localStorage.getItem('currentAdmin');
-        let currentUser = JSON.parse(jsonUserData);
-        this.menuservice.index(currentUser.token).subscribe({
+        this.menuservice.index().subscribe({
           next:res=>{
             this.menus = res;
           }

@@ -49,17 +49,17 @@ export class ReservationService {
   return this.http.post<any>(url, resData,httpOption)
 
 }
-update(reservation: any, token: string) {
+update(reservation: any, token:any) {
   let headers = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': 'Bearer ' + token
+
   });
   let httpOptions = {
-    headers: headers,
-    method: 'PUT'
+    headers: headers
   };
   let endpoint = "reservation/";
-  let url = this.host + endpoint + reservation.id;
+  let url = this.host + endpoint +reservation.id;
   return this.http.put<any>(url, reservation, httpOptions);
 }
 

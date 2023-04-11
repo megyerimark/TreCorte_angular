@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminupdatdataComponent } from './adminupdatdata.component';
+import { MenuindexComponent } from './menuindex.component';
 
-describe('AdminupdatdataComponent', () => {
-  let component: AdminupdatdataComponent;
-  let fixture: ComponentFixture<AdminupdatdataComponent>;
+describe('MenuindexComponent', () => {
+  let component: MenuindexComponent;
+  let fixture: ComponentFixture<MenuindexComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminupdatdataComponent ]
+      declarations: [ MenuindexComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminupdatdataComponent);
+    fixture = TestBed.createComponent(MenuindexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

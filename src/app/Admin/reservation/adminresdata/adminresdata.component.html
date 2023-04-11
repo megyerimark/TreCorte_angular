@@ -1,28 +1,47 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Vezetéknév</th>
-      <th scope="col">Keresztnév</th>
-      <th scope="col">Email</th>
-      <th scope="col">Telefonszám</th>
-      <th scope="col">Vendégekszáma</th>
-      <th scope="col">Dátum</th>
-      <th scope="col">Műveletek</th>
-    </tr>
-  </thead>
-  <tbody *ngFor='let res of reservations'>
-    <tr>
-      <th scope="row">{{res.id}}</th>
-      <td>{{res.first_name}}</td>
-      <td>{{res.last_name}}</td>
-      <td>{{res.email}}</td>
-      <td>{{res.tel_number}}</td>
-      <td>{{res.guest_number}}</td>
-      <td>{{res.res_date}}</td>
-      <td>
-        <button class="btn btn-info" (click)="Delete(res.id)">Törlés</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<app-admin-nav></app-admin-nav>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Vezetéknév</th>
+        <th scope="col">Keresztnév</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefonszám</th>
+        <th scope="col">Vendégekszáma</th>
+        <th scope="col">Dátum</th>
+        <th scope="col">Műveletek</th>
+      </tr>
+    </thead>
+    <tbody *ngFor='let res of reservations'>
+      <tr>
+        <th scope="row">{{res.id}}</th>
+        <td>{{res.first_name}}</td>
+        <td>{{res.last_name}}</td>
+        <td>{{res.email}}</td>
+        <td>{{res.tel_number}}</td>
+        <td>{{res.guest_number}}</td>
+        <td>{{res.res_date}}</td>
+        <td>
+          <button class="btn btn-info" (click)="Delete(res.id)">Törlés</button>
+          <button (click)="update(res)">Módosít</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<form [formGroup]="form"  *ngIf="show" (ngSubmit)="Update()" >
+
+
+  <input type="text" placeholder="vezetéknév" formControlName="first_name" class="form-control" >
+  <input type="text" placeholder="keresztnév" formControlName="last_name" class="form-control">
+  <input type="text" placeholder="email" formControlName="email" class="form-control" >
+  <input type="text" placeholder="telefonszám" formControlName="tel_number" class="form-control" >
+  <input type="text" placeholder="vendégszám" formControlName="guest_number" class="form-control" >
+
+  <input type="datetime-local"  formControlName="res_date" class="form-control" >
+
+  <div class="button mb-3 text-center">
+    <button id="button" class="btn btn-info" type="submit" >Szerkesztés</button>
+  </div>
+</form>

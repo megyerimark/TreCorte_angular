@@ -12,10 +12,9 @@ export class MenuService {
   constructor(private http: HttpClient) { }
 
 
-  index(token: string) {
+  index() {
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
+      'Content-Type': 'application/json'
     });
 
     let httpOption = {

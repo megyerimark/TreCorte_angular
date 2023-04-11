@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { MenusComponent } from './Admin/menus/menus.component';
 import { ReservationComponent } from './Admin/reservation/reservation.component';
 import { AdminresdataComponent } from './Admin/reservation/adminresdata/adminresdata.component';
+import { MenuindexComponent } from './home/menuindex/menuindex.component';
+
 
 const routes: Routes = [
   {path:"admin/register", component:RegisterComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
 
 
 
+
   {path:"foglalas", component:ReservationComponent},
+  {path:"menuk", component:MenuindexComponent},
   {path:"foglalas_adatok", component:AdminresdataComponent, canActivate:[GuardGuard]},
 
   {path:"admin/menus", component:MenusComponent, canActivate:[GuardGuard]},
