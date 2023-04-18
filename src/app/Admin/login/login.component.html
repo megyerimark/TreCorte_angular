@@ -1,20 +1,38 @@
-<form class="register" [formGroup]="form" (ngSubmit)="alogin()">
-  <h1>Admin</h1>
 
-  <div class="container">
-    <div class="email">
-      <label for="">Email</label>
-      <input type="email"  placeholder="email" formControlName="email">
-      </div>
-      <div class="password">
-        <label for="">Jelszó</label>
-        <input type="password"  placeholder="Jelszó"   formControlName="password">
+
+  <!DOCTYPE html>
+  <html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+<div class="container">
+  <div class="drop">
+    <div class="content">
+      <h2>Belépés</h2>
+      <form class="register" [formGroup]="form" (ngSubmit)="alogin()">
+        <div class="inputBox">
+          <input type="email"  placeholder="email" formControlName="email">
         </div>
-        <div class="btn">
+        <div class="inputBox">
+          <input type="password"  placeholder="Jelszó"   formControlName="password">
+        </div>
+        <div class="inputBox">
         <button type="submit">Belépés</button>
         </div>
+      </form>
+    </div>
+
+  </div>
+  <a routerLink="/admin/register" class="btns">Regisztráció</a>
+  <div class="btnsb">
+    
   </div>
 
+</div>
 
 
-  </form>
+  </body>
+  </html>

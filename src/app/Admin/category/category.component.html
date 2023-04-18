@@ -1,6 +1,5 @@
 
-<app-admin
-></app-admin>
+<app-admin-nav></app-admin-nav>
 <form [formGroup]="form" (ngSubmit)="uploadFile()">
   <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
   <input type="text" placeholder="név" formControlName="name" class="form-control" >
@@ -27,5 +26,4 @@
       </div>
     </div>
   </div>
-
 
