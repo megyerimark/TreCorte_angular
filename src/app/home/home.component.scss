@@ -67,9 +67,7 @@ footer{
 }
 .socailIcons a svg {
   font-size: 4em;
-  width: 25px;
   opacity: 0.9;
-  
 }
 .socailIcons a:hover{
   transition: 0.5s;
@@ -124,6 +122,13 @@ footer{
 @media (max-width:700px){
   .footerNavv ul{
     flex-direction: column;
+  }
+  header h1{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+
   }
   .footerNavv ul li{
     width: 100%;
