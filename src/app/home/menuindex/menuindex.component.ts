@@ -35,6 +35,7 @@ menus: any;
     this.menuservice.index().subscribe({
       next:res=>{
         this.menus = res;
+        console.log('Megyeri Márk Máté');
       }
     });
   }

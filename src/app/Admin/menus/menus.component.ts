@@ -55,6 +55,7 @@ export class MenusComponent {
         this.menuservice.index().subscribe({
           next:res=>{
             this.menus = res;
+            console.log('Megyeri Márk Máté');
           }
         });
       }
@@ -120,7 +121,6 @@ uploadFile() {
         }
       })
     }
-
 
 
 

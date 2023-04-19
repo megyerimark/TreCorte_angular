@@ -53,6 +53,7 @@ export class CategoryComponent {
         this.category.index(currentUser.token).subscribe({
           next:res=>{
             this.categories = res;
+            console.log('Megyeri Márk Máté');
           }
         });
       }

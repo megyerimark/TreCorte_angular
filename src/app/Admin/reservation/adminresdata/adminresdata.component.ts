@@ -49,6 +49,7 @@ index(){
   this.reservationServ.index(currentUser.token).subscribe({
     next:res=>{
       this.reservations = res;
+      console.log('Megyeri Márk Máté');
     }
   });
 

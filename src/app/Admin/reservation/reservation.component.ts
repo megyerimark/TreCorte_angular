@@ -68,8 +68,7 @@ success!:any;
             Swal.fire(
             'Sikeres Foglalás:' , data.data.first_name +'\n' + data.data.last_name,'success');
             this.success=true;
-
-
+      
           },
           error:err =>{
             this.toastr.error('Hiba! A foglalás sikertelen!');

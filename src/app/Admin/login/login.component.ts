@@ -45,16 +45,17 @@ export class LoginComponent {
                 imageUrl: 'https://c4.wallpaperflare.com/wallpaper/32/804/961/spirit-blossom-yasuo-yasuo-league-of-legends-league-of-legends-riot-games-hd-wallpaper-preview.jpg',
                 imageWidth: 400,
                 imageHeight: 200,
-              })
-        
-
-            }else{
-              Swal.fire({
-                icon: 'error',
-                title: 'Hoppá!...',
-                text: 'Sikertelen Bejelentkezés!'
-              })
+              });
             }
+            
+          },
+          error:err =>{
+            Swal.fire({
+              icon: 'error',
+              title: 'Hoppá!...',
+              text: 'Sikertelen bejelentkezés!'
+            })
+
           }
         });
       }

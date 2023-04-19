@@ -8,7 +8,7 @@
   
   }
   
-footer{
+header{
 position: relative;
 width:100%;
 height: 100vh;
@@ -21,11 +21,11 @@ background-repeat: no-repeat;
 background-size: cover;
 
 }
-footer img {
+header img {
   width: 100%;
 }
 
-footer .set{
+header .set{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -33,11 +33,11 @@ footer .set{
   left: 0;
   pointer-events: none;
 }
-footer .set div{
+header .set div{
   position: absolute;
   display: block;
 }
-footer h1{
+header h1{
   color: white;
   font-size: 8em;
   align-items: center;
@@ -46,3 +46,88 @@ footer h1{
 }
 
 
+footer{
+  background-color: black;
+}
+.footerCont{
+  width: 100%;
+  padding: 70px 30px 20px;
+
+}
+.socailIcons{
+  display: flex;
+  justify-content: center;
+}
+
+.socailIcons a{
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+}
+.socailIcons a svg {
+  font-size: 4em;
+  width: 25px;
+  opacity: 0.9;
+  
+}
+.socailIcons a:hover{
+  transition: 0.5s;
+}
+.socailIcons a:hover svg{
+  color: orangered;
+  transition: 0.5s;
+}
+.footerNavv ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNavv {
+  margin: 30px 0 ;
+
+}
+.footerNavv ul li{
+  color: orangered;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footerNavv ul li a {
+  background: -webkit-linear-gradient(red, orangered);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footerNavv ul li a:hover{
+  opacity: 1;
+  color: orangered;
+}
+.footerBottom{
+  padding:20px;
+  text-align: center;
+}
+.footerBottom p {
+  background: -webkit-linear-gradient(red, orangered);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+@media (max-width:700px){
+  .footerNavv ul{
+    flex-direction: column;
+  }
+  .footerNavv ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}

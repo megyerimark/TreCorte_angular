@@ -55,6 +55,7 @@ categories!:any;
       this.category.index(currentUser.token).subscribe({
         next:res=>{
           this.categories = res;
+          console.log('Megyeri Márk Máté');
         }
       });
     }
