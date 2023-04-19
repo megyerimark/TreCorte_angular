@@ -4,6 +4,7 @@ import { ReservationService } from '../Shared/reservation.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservation',
@@ -24,15 +25,15 @@ reservations: any;
     private http:HttpClient,
     private formBuild:FormBuilder){
 
-      this.form = this.formBuild.group({
-        file:null,
-       first_name:['', Validators.required],
-        last_name:['', Validators.required],
-        email:['', Validators.required],
-        tel_number:['', Validators.required],
-        res_date:['', Validators.required],
-        guest_number:['', Validators.required],
-      });
+      // this.form = this.formBuild.group({
+      //   file:null,
+      //  first_name:['', Validators.required],
+      //   last_name:['', Validators.required],
+      //   email:['', Validators.required],
+      //   tel_number:['', Validators.required],
+      //   res_date:['', Validators.required],
+      //   guest_number:['', Validators.required],
+      // });
     }
 
     ngOnInit(): void {
@@ -64,7 +65,8 @@ success!:any;
       this.reservationServ.store(first_name,last_name,email,tel_number,
         res_date,guest_number).subscribe({
           next : data =>{
-            this.toastr.success("Sikeres foglalás");
+            Swal.fire(
+            'Sikeres Foglalás:' , data.data.first_name +'\n' + data.data.last_name,'success');
             this.success=true;
 
 
@@ -75,9 +77,6 @@ success!:any;
           }
 
         });
-
-
-
     }
 
 

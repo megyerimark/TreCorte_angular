@@ -5,6 +5,7 @@ import { MenuService } from '../Shared/menu.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menus',
@@ -87,11 +88,15 @@ uploadFile() {
 
 
     next: res =>{
-     this.toastr.success("Sikeres feltöltés");
+      Swal.fire('Siker!',' sikeres felvétel','success');
      this.index();
     },
     error:err =>{
-      this.toastr.error("Sikertelen feltöltés")
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Sikertelen felvétel!'
+      })
 
     }
 })
@@ -106,7 +111,11 @@ uploadFile() {
           this.index();
         },
         error:err =>{
-          this.toastr.error("Sikertelen törlés")
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Sikertelen törlés!'
+          })
 
         }
       })

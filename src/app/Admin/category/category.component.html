@@ -2,9 +2,9 @@
 <app-admin-nav></app-admin-nav>
 <form [formGroup]="form" (ngSubmit)="uploadFile()">
   <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
-  <input type="text" placeholder="név" formControlName="name" class="form-control" >
+  <input type="text" placeholder="kategória név , pl csípős" formControlName="name" class="form-control" >
 
-  <input type="text"  class="form-control" placeholder="kategória név , pl csípős" formControlName="description">
+  <input type="text"  class="form-control" placeholder="leírás" formControlName="description">
   <div class="button mb-3 text-center">
     <button id="button" class="btn btn-info" type="submit" >Felvétel</button>
   </div>
@@ -21,8 +21,8 @@
         <button  class="btn btn-info" (click)="Delete(category.id)">Törlés</button>
       </td>
       <div class="imgBx" data-text="Megyeri">
-        <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image" height="15px">
-        <td>{{category.name}}</td>
+        <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image" height="150px">
+        <td>{{category.description}}</td>
       </div>
     </div>
   </div>

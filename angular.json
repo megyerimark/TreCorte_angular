@@ -94,7 +94,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/sweetalert12/src/sweetalert2.scss"
             ],
             "scripts": []
           }

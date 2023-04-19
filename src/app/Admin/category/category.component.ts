@@ -5,6 +5,7 @@ import { CategoryService } from '../Shared/category.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-category',
@@ -83,28 +84,53 @@ uploadFile() {
 
 
     next: res =>{
-     this.toastr.success("Sikeres feltöltés");
+      Swal.fire('Siker!',' sikeres feltöltés','success');
      this.index();
     },
     error:err =>{
-      this.toastr.error("Sikertelen feltöltés")
+      Swal.fire({
+        icon: 'error',
+        title: 'Hoppá!...',
+        text: 'Sikertelen Felvétel!'
+      })
+
 
     }
 })
     }
 
 
-
+  
   Delete(id:any){
     let jsonUserData: any = localStorage.getItem('currentAdmin');
     let currentUser = JSON.parse(jsonUserData);
     this.category.Delete(id, currentUser.token).subscribe({
       next:res=>{
-       this.toastr.info("TÖRÖLVE")
+      // Swal.fire({
+      //   title:'Biztosan törölni szeretnéd?',
+      //   text:'A törlés nem vonható vissza',
+      //   icon:'warning',
+      //   showCancelButton:true,
+      //   confirmButtonText:'Törlés',
+      // }).then((result) =>{
+      //   if(result.value){
+      //     Swal.fire(
+      //       'Törölve',
+      //       "A kategória sikeresen törölve",
+      //       'success'
+      //     );
+      //   }
+      // });
+      Swal.fire('Siker!',' sikeres törlés','info');
+      
         this.index();
       },
       error:err =>{
-        this.toastr.error("Sikertelen törlés")
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Sikertelen törlés!'
+        })
 
       }
     })
