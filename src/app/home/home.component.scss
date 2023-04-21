@@ -3,11 +3,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 
   *{
-
+    margin: 0;
+    padding: 0;
     font-family: 'Rubik Wet Paint', cursive;
-  
+
   }
-  
+
 header{
 position: relative;
 width:100%;
@@ -16,34 +17,60 @@ overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background:url("/assets/fire.gif");
+background: url("/assets/oc.jpg");
 background-repeat: no-repeat;
 background-size: cover;
-
 }
+
 header img {
   width: 100%;
 }
 
-header .set{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-header .set div{
-  position: absolute;
-  display: block;
-}
-header h1{
-  color: white;
-  font-size: 8em;
-  align-items: center;
+.countdown {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+
+}
+
+.countdown-item span:first-child {
+  font-size: 48px;
+}
+
+.countdown-item span:last-child {
+  font-size: 18px;
+  margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
@@ -108,7 +135,7 @@ footer{
   text-align: center;
 }
 .footerBottom p {
-  background: -webkit-linear-gradient(red, orangered);
+  background: -webkit-linear-gradient(red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -136,3 +163,5 @@ footer{
     margin: 10px;
   }
 }
+
+

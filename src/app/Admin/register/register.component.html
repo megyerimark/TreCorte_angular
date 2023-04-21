@@ -13,10 +13,10 @@
       <h2>Regisztráció</h2>
       <form class="register" [formGroup]="form" (ngSubmit)="register()">
         <div class="inputBox">
-          <input type="email"  placeholder="email" formControlName="email">
+          <input type="text"  placeholder="név" formControlName="name">
         </div>
         <div class="inputBox">
-          <input type="text"  placeholder="név" formControlName="name">
+          <input type="email"  placeholder="email" formControlName="email">
         </div>
         <div class="inputBox">
           <input type="password"  placeholder="Jelszó"   formControlName="password">
