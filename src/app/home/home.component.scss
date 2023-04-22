@@ -17,7 +17,8 @@ overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background: url("/assets/oc.jpg");
+// background: url("/assets/fire.gif");
+background: black;
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -26,10 +27,17 @@ header img {
   width: 100%;
 }
 
-.countdown {
+.countdown{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+}
+.content{
+  align-items: center;
+  text-align: center;
+  color: white;
+
 }
 
 .countdown-item {
@@ -38,10 +46,13 @@ header img {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
-  color: #000000;
+  padding: 15px;
+  color: #eb0909;
   font-size: 24px;
+  margin-top: 15px;
   font-weight: bold;
   border-radius: 10px;
+  background-size: cover;
 
 }
 
@@ -133,20 +144,23 @@ footer{
 .footerBottom{
   padding:20px;
   text-align: center;
+  background: gray;
 }
 .footerBottom p {
-  background: -webkit-linear-gradient(red, blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
+  color: white;
+  // background: -webkit-linear-gradient(red, blue);
+  // -webkit-background-clip: text;
+  //-webkit-text-fill-color: transparent;
   text-transform: uppercase;
   opacity: 0.7;
   letter-spacing: 1px;
   font-weight: 400;
   margin: 0px 5px;
+  height: 13px;
 }
 
-@media (max-width:700px){
+@media screen and (max-width: 700px){
   .footerNavv ul{
     flex-direction: column;
   }
@@ -162,6 +176,38 @@ footer{
     text-align: center;
     margin: 10px;
   }
+  .countdown {
+    width: 50%;
+    clear: both;
+    text-align: center;
+    align-items: center;
+    display: block;
+  }
+  .content h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: blue;
+
+  }
+  }
+
+
+
+
+.footerBottom p  .small {
+  font-size: smaller;
+  color: red;
+  align-items: center;
+  text-decoration:line-through;
+  text-align: center;
 }
 
+.footerBottom p  .small:hover{
+background-color: white;
+border-radius: 15px;
+left: 25px;
 
+
+}
