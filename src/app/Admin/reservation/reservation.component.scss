@@ -3,6 +3,119 @@
 
   *{
       font-family: 'Rubik Wet Paint', cursive;
-  
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+      // background: purple;
+
   }
-  
+
+  body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // min-height: 100vh;
+    flex-direction: none;
+    gap: 30px;
+    background: palevioletred;
+  }
+.inputBox{
+  position: relative;
+  margin: 20px 0 ;
+}
+
+.inputBox input{
+
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 0 10px ;
+  background: transparent;
+  border: 1.2px solid white;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+
+  top: 0;
+  font-size: 12px;
+
+}
+
+.inputBox label{
+  position: absolute;
+ top: 50%;
+ left: 5px;
+ transform: translateY(-50%);
+ font-size: white;
+ padding:  0 5px;
+ pointer-events: none;
+ transition: .5s;
+}
+form{
+  padding: 10px;
+}
+
+
+
+//gomb
+  form button{
+    position: absolute;
+    margin-top: 50px;
+    left: 50%;
+    // top: 50%;
+    // left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing:4px ;
+    border: none;
+    background: red;
+  }
+
+  form button::before{
+    content: '';
+    height: 80px;
+    width: 200px;
+    position:absolute ;
+    top: -8px;
+    left: 0;
+    border-left: 2px solid #262626;
+    border-right: 2px solid #262626;
+    transition: 1s;
+  }
+  form button::after{
+    content: '';
+    height: 60px;
+    width: 230px;
+    position:absolute ;
+    top: 0;
+    left: -15px;
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    transition: 1s;
+
+  }
+
+
+  form button:hover::before{
+    transform: rotateY(180deg);
+  }
+  form button:hover::after{
+    transform: rotateX(180deg);
+  }
+
+
+
+
