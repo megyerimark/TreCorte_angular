@@ -39,8 +39,30 @@
 </header>
 <body>
 
+
+  <h2>Ételeink</h2>
+  <div class="menus">
+    
+<div class="containerimg" *ngFor = 'let menu of menus'>
+  <div class="card">
+    <div class="imgBx" data-text="Megyeri">
+      <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="{{menu.name}}">
+      <tr>{{menu.name}}</tr>
+      <td>{{menu.elnevez}}</td>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+
+
   
+  
+
   <div class="reservations">
+    <h1>Foglalj Most</h1>
     <form [formGroup]="form"  (ngSubmit)="reservation()">
       <div class="inputBox">
         <!-- <label>Vezetéknév</label> -->
@@ -70,39 +92,7 @@
       
       <button type="submit">Foglalás</button>
     </form>
-    
-
-
-
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-  <div class="menus">
-    
-<div class="container" *ngFor = 'let menu of menus'>
-  <div class="card">
-    <div class="imgBx" data-text="Megyeri">
-      <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="{{menu.name}}">
-      <tr>{{menu.name}}</tr>
-      <td>{{menu.elnevez}}</td>
-    </div>
-  </div>
-</div>
-
-  </div>
-
-
-
 </body>
   <footer>
 

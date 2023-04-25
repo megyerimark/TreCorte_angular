@@ -23,24 +23,34 @@
         <td>{{res.res_date}}</td>
         <td>
           <button class="btn btn-info mt-2  mr-5p" (click)="Delete(res.id)">Törlés</button>
-         <button (click)="update(res)" class="btn btn-danger mt-2">Módosít</button>
+         <button (click)="update(res)" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Módosít</button>
       </tr>
     </tbody>
   </table>
 
 
-<form [formGroup]="form"  *ngIf="show" (ngSubmit)="Update()" >
-
-
-  <input type="text" placeholder="vezetéknév" formControlName="first_name" class="form-control" >
-  <input type="text" placeholder="keresztnév" formControlName="last_name" class="form-control">
-  <input type="email" placeholder="email" formControlName="email" class="form-control" >
-  <input type="number" placeholder="telefonszám" formControlName="tel_number" class="form-control" >
-  <input type="number" placeholder="vendégszám" formControlName="guest_number" class="form-control" >
-
-  <input type="datetime-local"  formControlName="res_date" class="form-control" >
-
-  <div class="button mb-3 text-center">
-    <button id="button" class="btn btn-info" type="submit"  >Szerkesztés</button>
+<!-- Modal -->
+<form [formGroup]="form" (ngSubmit)="Update()">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Szerkesztés</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="vezetéknév" formControlName="first_name" class="form-control" >
+          <input type="text" placeholder="keresztnév" formControlName="last_name" class="form-control">
+          <input type="email" placeholder="email" formControlName="email" class="form-control" >
+          <input type="number" placeholder="telefonszám" formControlName="tel_number" class="form-control" >
+          <input type="number" placeholder="vendégszám" formControlName="guest_number" class="form-control" >
+          <input type="datetime-local"  formControlName="res_date" class="form-control" >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégsem</button>
+          <button type="submit" class="btn btn-primary">Mentés</button>
+        </div>
+      </div>
+    </div>
   </div>
 </form>
