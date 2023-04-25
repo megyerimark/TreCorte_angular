@@ -15,7 +15,7 @@
    -->
   
   
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="UTF-8">
@@ -42,14 +42,13 @@
     <div class="container" *ngFor = 'let category of categories'>
       <div class="mycard">
         <div class="cimg">
-          <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image">
+          <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image" >
         </div>
          <div class="cdetail">
         <p>{{category.description}}</p>
-
-      
       </div>
         
+      <button (click)="Delete(category.id)">Törlés</button>
       </div>
     </div>
   

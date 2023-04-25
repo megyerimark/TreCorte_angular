@@ -8,6 +8,7 @@
     font-family: 'Rubik Wet Paint', cursive;
 
   }
+  
 
 header{
 position: relative;
@@ -21,11 +22,24 @@ align-items: center;
 background: black;
 background-repeat: no-repeat;
 background-size: cover;
+z-index: 1;
+
+
 }
 
-header img {
-  width: 100%;
+body {
+  margin: 0;
 }
+.menus img{
+  height: 75px;
+  width: 80px;
+}
+.menus{
+  margin-top: 15px;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
 
 .countdown{
   display: flex;
@@ -67,7 +81,143 @@ header img {
 
 
 
+.reservations{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/assets/kuk.jpg");
+  background-size:cover;
+    height: 75vh;
+  margin-top: -70px; /* vagy akármilyen érték ami eltünteti a fehér csíkot */;
+ 
+}
 
+.reservations form   {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 650px; /* A margin jobbra irányuló értéke 650px */
+  padding: 15px;
+  font-size: 12px;
+  margin-top: 15px;
+  font-weight: bold;
+
+}
+
+.reservations form .inputBox { 
+   position: relative;
+  margin: 20px 0 ;
+}
+.reservations form .inputBox input{
+
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 0 10px ;
+    background: transparent;
+    border: 1.2px solid white;
+    outline: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+  
+  }
+  
+
+
+// form .inputBox label{
+//   top: 50%;
+//   left: 5px;
+//   transform: translateY(-50%);
+//   color: red;
+//   padding:  0 5px;
+//   pointer-events: none;
+//   transition: .5s;
+
+// }
+
+// .reservations form .inputBox:hover input{
+//   border-color:gold;
+
+// }
+
+
+
+
+.reservations button{
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.reservations button:hover{
+  background-color: #2980b9;
+
+}
+
+// .reservations button{
+//   transform: translate(-50%,-50%);
+//   // margin-top: 25px;
+//   display: flex;
+//   height: 14px;
+//   width: 80px;
+//   line-height: 65px;
+//   text-align: center;
+//   font-family: Verdana, Geneva, Tahoma, sans-serif;
+//   font-size: 12px;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   letter-spacing:4px ;
+//   border: none;
+//   background: linear-gradient();
+// }
+
+// form button::before{
+//   content: '';
+//   height: 67px;
+//   width: 105px;
+//   position:absolute ;
+//   top: -5px;
+//   left: 0;
+//   border-left: 2px solid #9b1616;
+//   border-right: 2px solid #ac1a1a;
+//   transition: 1s;
+// }
+// form button::after{
+//   content: '';
+//   height: 55px;
+//   width: 120px;
+//   position:absolute ;
+//   top: 0;
+//   left: -10px;
+//   border-top: 2px solid #8d1e1e;
+//   border-bottom: 2px solid #aa1a1a;
+//   transition: 1s;
+
+// }
+
+
+// form button:hover::before{
+//   transform: rotateY(180deg);
+// }
+// form button:hover::after{
+//   transform: rotateX(180deg);
+// }
 
 
 
@@ -191,7 +341,19 @@ footer{
     color: blue;
 
   }
+  .reservations form {
+    margin: 0 0 0 25px; ;
   }
+ 
+  }
+
+  // @media screen and (max-width: 920px){
+  //   .reservations form {
+  //     margin: 0 0 0 800px; ;
+  //   }
+
+  // }
+
 
 
 

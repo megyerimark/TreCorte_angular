@@ -17,9 +17,6 @@
 
       <h1>TreCorte</h1>
 
-
-
-
   <div class="countdown">
     <div class="countdown-item">
       <span id="day">{{ day }}</span>
@@ -42,6 +39,43 @@
 </header>
 <body>
 
+  
+  <div class="reservations">
+    <form [formGroup]="form"  (ngSubmit)="reservation()">
+      <div class="inputBox">
+        <!-- <label>Vezetéknév</label> -->
+        <input type="text" formControlName="first_name" placeholder="Vezertéknév"  />
+      </div>
+      <div class="inputBox">
+        <!-- <label>Keresztnév</label> -->
+        <input type="text" formControlName="last_name" placeholder="Keresztnév"/>
+      </div>
+      <div class="inputBox">
+        <!-- <label>Email</label> -->
+        <input type="email" formControlName="email"  placeholder="Email"/>
+      </div>
+      <div class="inputBox">
+        <!-- <label >Telefonszám</label> -->
+        <input type="tel" formControlName="tel_number"  placeholder="Telefonszám"/>
+      </div>
+  
+      <div class="inputBox">
+        <!-- <label>Vendégszám</label> -->
+        <input type="number" formControlName="guest_number" placeholder="Vendégek száma" />
+      </div>
+      <div class="inputBox">
+        <!-- <label >Foglalási dátum</label> -->
+        <input type="datetime-local" formControlName="res_date" />
+      </div>
+      
+      <button type="submit">Foglalás</button>
+    </form>
+    
+
+
+
+
+  </div>
 
 
 
@@ -53,17 +87,19 @@
 
 
 
+  <div class="menus">
+    
+<div class="container" *ngFor = 'let menu of menus'>
+  <div class="card">
+    <div class="imgBx" data-text="Megyeri">
+      <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="{{menu.name}}">
+      <tr>{{menu.name}}</tr>
+      <td>{{menu.elnevez}}</td>
+    </div>
+  </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
