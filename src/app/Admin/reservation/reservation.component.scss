@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
 *{
    margin: 0;
@@ -5,6 +6,7 @@
    font-family: 'Castoro Titling', cursive;
 
  }
+ 
 
 //   body{
 
@@ -25,7 +27,7 @@
 
 //  }
 
- 
+
 .reservations{
   display: flex;
   justify-content: center;
@@ -33,7 +35,7 @@
   background: url("/assets/kuk.jpg");
   background-size:cover;
     height: 75vh; /* vagy akármilyen érték ami eltünteti a fehér csíkot */;
- 
+
 }
 .reservations .res_h1 h1{
   margin-left: 250px;
@@ -60,7 +62,7 @@
 }
 
 
-.reservations form .inputBox { 
+.reservations form .inputBox {
    position: relative;
   margin: 20px 0 ;
 }
@@ -81,9 +83,9 @@
     border-radius: 10px;
     height: 30px;
     width: 250px;
-  
+
   }
-  
+
 
 
 
@@ -122,7 +124,7 @@
 //   background: url("/assets/kuk.jpg");
 //   background-size:cover;
 //     height: 75vh; /* vagy akármilyen érték ami eltünteti a fehér csíkot */;
- 
+
 // }
 // .reservations .res_h1 h1{
 //   margin-left: 250px;
@@ -149,7 +151,7 @@
 // }
 
 
-// .reservations form .inputBox { 
+// .reservations form .inputBox {
 //    position: relative;
 //   margin: 20px 0 ;
 // }
@@ -170,9 +172,9 @@
 //     border-radius: 10px;
 //     height: 30px;
 //     width: 250px;
-  
+
 //   }
-  
+
 
 
 

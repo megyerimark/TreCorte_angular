@@ -11,43 +11,45 @@
     <button type="button" class="btn btn-primary">
       <i class="fas fa-search"></i>
     </button> -->
-  
+
     <div class="box">
       <input type="text" placeholder="Keresés" [(ngModel)]="actualRes">
       <a href="">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg>
       </a>
     </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Vezetéknév</th>
-        <th scope="col">Keresztnév</th>
-        <th scope="col">Email</th>
-        <th scope="col">Telefonszám</th>
-        <th scope="col">Vendégekszáma</th>
-        <th scope="col">Dátum</th>
-        <th scope="col">Műveletek</th>
-      </tr>
-    </thead>
-    <tbody *ngFor='let res of reservations |  respipe:actualRes'>
-      <tr>
-        <th scope="row">{{res.id}}</th>
-        <td>{{res.first_name}}</td>
-        <td>{{res.last_name}}</td>
-        <td>{{res.email}}</td>
-        <td>{{res.tel_number}}</td>
-        <td>{{res.guest_number}}</td>
-        <td>{{res.res_date}}</td>
-        <td>
-          <button class="btn btn-info mt-2  mr-5p" (click)="Delete(res.id)">Törlés</button>
-         <button (click)="update(res)" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Módosít</button>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Vezetéknév</th>
+          <th scope="col">Keresztnév</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefonszám</th>
+          <th scope="col">Vendégekszáma</th>
+          <th scope="col">Dátum</th>
+          <th scope="col">Műveletek</th>
+        </tr>
+      </thead>
+      <tbody *ngFor='let res of reservations |  respipe:actualRes'>
+        <tr>
+          <th scope="row">{{res.id}}</th>
+          <td class="cell">{{res.first_name}}</td>
+          <td>{{res.last_name}}</td>
+          <td>{{res.email}}</td>
+          <td>{{res.tel_number}}</td>
+          <td>{{res.guest_number}}</td>
+          <td>{{res.res_date}}</td>
+          <td>
+            <button class="btn btn-info mt-2 py-2  mr-5p" (click)="Delete(res.id)">Törlés</button>
+           <button (click)="update(res)" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Módosít</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 <!-- Modal -->

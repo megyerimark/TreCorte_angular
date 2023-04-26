@@ -11,8 +11,8 @@ export class RespipePipe implements PipeTransform {
 
     }
     return values.filter((value)=> value.first_name.indexOf(filter)>-1
-    || value.email.indexOf(filter)>-1 || value.tel_number.indexOf(filter)>-1);
-   
+    || value.email.indexOf(filter)>-1 || value.tel_number.indexOf(filter)>-1|| value.res_date.indexOf(filter)>-1);
+
   }
 
 }

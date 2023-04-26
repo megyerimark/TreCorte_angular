@@ -25,10 +25,8 @@
         <input type="email" formControlName="email"  placeholder="Email"/>
       </div>
       <div class="inputBox">
-        <!-- <label >Telefonszám</label> -->
-        <input type="tel" formControlName="tel_number"  placeholder="Telefonszám"/>
-      </div>
-  
+        <input id="postfix" value="+36" type="text" id="form2" class="form-control" />
+    </div>
       <div class="inputBox">
         <!-- <label>Vendégszám</label> -->
         <input type="number" formControlName="guest_number" placeholder="Vendégek száma" />
@@ -37,7 +35,7 @@
         <!-- <label >Foglalási dátum</label> -->
         <input type="datetime-local" formControlName="res_date" />
       </div>
-      
+
       <button type="submit">Foglalás</button>
     </form>
   </div>
