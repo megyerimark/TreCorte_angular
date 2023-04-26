@@ -6,16 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  showNav = false;
+//   showNav = false;
 
 
-  homer= false;
+//   homer= false;
 
-  home(){
-  this.homer = !this.homer;
-  }
- show(){
+//   home(){
+//   this.homer = !this.homer;
+//   }
+//  show(){
 
- }
+//  }
 
 }

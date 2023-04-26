@@ -8,6 +8,9 @@
     font-family: 'Castoro Titling', cursive;
 
   }
+  html {
+    scroll-behavior: smooth;
+  }
   
 
 header{
@@ -23,7 +26,10 @@ background-repeat: no-repeat;
 background-size: cover;
 z-index: 1;
 
+}
 
+.containerimg .card  .imgBx td, tr{
+  font-size: smaller;
 }
 
 body {
@@ -57,10 +63,10 @@ body {
   border-radius: 10px;
 }
 
-/* Handle on hover */
+// /* Handle on hover */
 // ::-webkit-scrollbar-thumb:hover {
-//   background: #b30000; 
-// }
+//    background: #b30000; 
+//  }
 
 
 h2{
@@ -94,7 +100,11 @@ h2{
 
 .containerimg .card .imgBx img {
   width: 100%;
-  height: auto;
+  height: 100px;
+}
+
+.m h2{
+  color: #5689c0;
 }
 
 
@@ -148,7 +158,6 @@ h2{
   background: url("/assets/kuk.jpg");
   background-size:cover;
     height: 75vh; /* vagy akármilyen érték ami eltünteti a fehér csíkot */;
- 
 }
 .reservations .res_h1 h1{
   margin-left: 250px;
@@ -323,28 +332,28 @@ footer{
 }
 
 @media screen and (max-width: 700px){
-  .footerNavv ul{
-    flex-direction: column;
-  }
-  header h1{
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin: 10px;
+  // .footerNavv ul{
+  //   flex-direction: column;
+  // }
+  // header h1{
+  //   flex-direction: column;
+  //   width: 100%;
+  //   text-align: center;
+  //   margin: 10px;
 
-  }
-  .footerNavv ul li{
-    width: 100%;
-    text-align: center;
-    margin: 10px;
-  }
-  .countdown {
-    width: 50%;
-    clear: both;
-    text-align: center;
-    align-items: center;
-    display: block;
-  }
+  // }
+  // .footerNavv ul li{
+  //   width: 100%;
+  //   text-align: center;
+  //   margin: 10px;
+  // }
+  // .countdown {
+  //   width: 50%;
+  //   clear: both;
+  //   text-align: center;
+  //   align-items: center;
+  //   display: block;
+  // }
   .content h1 {
     display: flex;
     align-items: center;

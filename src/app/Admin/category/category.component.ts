@@ -15,6 +15,7 @@ import Swal from 'sweetalert2';
 export class CategoryComponent {
 
   currentUser: any;
+  actualCat!:string;
 
   categories!:any;
     form!:FormGroup;
@@ -61,6 +62,8 @@ export class CategoryComponent {
 
 
 
+
+  
 
 onFileChange(event:Event) {
   const file = (event.target as HTMLInputElement)?.files?.[0];

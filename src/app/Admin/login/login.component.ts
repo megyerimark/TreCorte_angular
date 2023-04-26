@@ -38,7 +38,7 @@ export class LoginComponent {
             if(res.success){
               localStorage.setItem('currentAdmin',
                JSON.stringify({token: res.data.token, name: res.data.name}));
-              this.router.navigate(['admin/admin']);
+              this.router.navigate(['foglalas_adatok']);
               // this.toastr.success('Üdvözöllek\n' + res.data.name)
               Swal.fire({
                 text: 'Sikeres Bejelentkezés.',

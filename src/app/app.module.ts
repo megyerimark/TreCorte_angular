@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import {  HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
-import { AdminComponent } from './Admin/admin/admin.component';
 import { LoginComponent } from './Admin/login/login.component';
 import { RegisterComponent } from './Admin/register/register.component';
 import { HomeComponent } from './home/home.component';
@@ -18,10 +17,11 @@ import { MenusComponent } from './Admin/menus/menus.component';
 import { ReservationComponent } from './Admin/reservation/reservation.component';
 import { AdminresdataComponent } from './Admin/reservation/adminresdata/adminresdata.component';
 import { MenuindexComponent } from './home/menuindex/menuindex.component';
+import { CatpipePipe } from './Admin/categorie/catpipe.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent,
@@ -32,6 +32,8 @@ import { MenuindexComponent } from './home/menuindex/menuindex.component';
     ReservationComponent,
     AdminresdataComponent,
     MenuindexComponent,
+    CatpipePipe,
+
 
   ],
   imports: [

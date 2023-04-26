@@ -1,0 +1,104 @@
+
+
+ 
+
+
+footer{
+    background-image: url("/assets/fo.jpg");
+    background:cover;
+   }
+   
+   
+   
+   
+   .footerCont{
+     width: 100%;
+     padding: 70px 30px 20px;
+   
+   }
+   .socailIcons{
+     display: flex;
+     justify-content: center;
+   }
+   
+   .socailIcons a{
+     text-decoration: none;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 50px;
+   }
+   .socailIcons a svg {
+     font-size: 4em;
+     opacity: 0.9;
+   }
+   .socailIcons a:hover{
+     transition: 0.5s;
+   }
+   .socailIcons a:hover svg{
+     color: #2980b9;
+     transition: 0.5s;
+   }
+   .footerNavv ul {
+     display: flex;
+     justify-content: center;
+     list-style-type: none;
+   }
+   
+   .footerNavv {
+     margin: 30px 0 ;
+   
+   }
+   .footerNavv ul li{
+     color:#2980b9;
+     margin: 20px;
+     text-decoration: none;
+     font-size: 1.3em;
+     opacity: 0.7;
+     transition: 0.5s;
+   }
+   .footerNavv ul li a {
+     background: -webkit-linear-gradient(#3498db, #2980b9);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
+   .footerNavv ul li a:hover{
+     opacity: 1;
+     color: #2980b9;
+   }
+   .footerBottom{
+     padding:20px;
+     text-align: center;
+     background: gray;
+   }
+   .footerBottom p {
+   
+     color: white;
+     // background: -webkit-linear-gradient(red, blue);
+     // -webkit-background-clip: text;
+     //-webkit-text-fill-color: transparent;
+     text-transform: uppercase;
+     opacity: 0.7;
+     letter-spacing: 1px;
+     font-weight: 400;
+     margin: 0px 5px;
+     height: 13px;
+   }
+   
+   @media screen and (max-width: 700px){
+     .footerNavv ul{
+       flex-direction: column;
+     }
+     
+     .footerNavv ul li{
+       width: 100%;
+       text-align: center;
+      margin: 10px;
+      }
+      .countdown {
+       width: 50%;
+       clear: both;
+        text-align: center;
+       align-items: center;
+       display: block;
+      }
+    }
