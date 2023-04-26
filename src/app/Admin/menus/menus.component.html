@@ -1,4 +1,11 @@
 <app-admin-nav></app-admin-nav>
+
+
+<div class="asd">
+
+  <input type="search" [(ngModel)]="actualMen" placeholder="Keresés névre, árra">
+</div>
+
 <form [formGroup]="form" (ngSubmit)="uploadFile()">
   <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
 
@@ -17,14 +24,14 @@
 
 
 
-  <div class="container" *ngFor = 'let menu of menus'>
+  <div class="container" *ngFor = 'let menu of menus | menupipe:actualMen'>
     <div class="card">
       <td>
         <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
       </td>
       <div class="imgBx" data-text="Megyeri">
         <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
-        <td>{{menu.id}}</td>
+        <td>{{menu.price}}</td><br>
         <td>{{menu.name}}</td><br>
         <td>kategória neve  : {{menu.elnevez}}</td>
       </div>

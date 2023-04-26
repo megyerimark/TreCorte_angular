@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 export class MenusComponent {
 
   currentUser: any;
-
+  actualMen!:string;
 
     form!:FormGroup;
   menus: any;

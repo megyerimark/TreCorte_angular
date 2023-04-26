@@ -14,6 +14,7 @@ import * as $ from 'jquery';
 export class AdminresdataComponent {
 
 currentUser: any;
+actualRes!:string;
 
   form!:FormGroup;
 reservations: any;

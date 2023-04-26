@@ -3,7 +3,36 @@
 font-family: 'Righteous', cursive;
 
 }
+.box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 30px;
+}
+.box:hover input {
+    width: 400px;
+}
 
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a svg{
+    color: red;
+    font-size: 18px;
+}
+// .sc input{
+//     width: 100%;
+// }
+// .sc{
+//     border-radius: 15px;
+//     margin-bottom: 15px;
+// }
 // form button{
 //   position: absolute;
 //   top: 50%;

@@ -18,6 +18,8 @@ import { ReservationComponent } from './Admin/reservation/reservation.component'
 import { AdminresdataComponent } from './Admin/reservation/adminresdata/adminresdata.component';
 import { MenuindexComponent } from './home/menuindex/menuindex.component';
 import { CatpipePipe } from './Admin/categorie/catpipe.pipe';
+import { MenupipePipe } from './Admin/menus/menupipe.pipe';
+import { RespipePipe } from './Admin/reservation/adminresdata/respipe.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,9 @@ import { CatpipePipe } from './Admin/categorie/catpipe.pipe';
     AdminresdataComponent,
     MenuindexComponent,
     CatpipePipe,
+    MenupipePipe,
+    RespipePipe,
+  
 
 
   ],
