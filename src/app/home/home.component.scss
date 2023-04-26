@@ -21,7 +21,7 @@ overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
- background: url("/assets/header.jpg");
+ background: url("/assets/head.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 z-index: 1;
@@ -155,13 +155,13 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/assets/kuk.jpg");
-  background-size:cover;
-    height: 75vh; /* vagy akármilyen érték ami eltünteti a fehér csíkot */;
+  height: 75vh;
+  background:linear-gradient(#c38eb4, #86abcf);
 }
-.reservations .res_h1 h1{
-  margin-left: 250px;
-  color: #2980b9;
+.reservations  h1{
+  justify-content: center;
+  align-items: center;
+  color: #fff;
   margin-bottom: 150px;
 }
 .reservations form   {
