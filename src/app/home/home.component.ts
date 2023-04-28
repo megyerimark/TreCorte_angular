@@ -33,6 +33,9 @@ reservations: any;
 
     }
 
+
+   
+
   private countDate!: number;
 public day!: number;
 public hour!: number;
@@ -116,9 +119,9 @@ success!:any;
               res_date: '',
               guest_number: ''
             });
-            
-            
-      
+
+
+
           },
           error:err =>{
             this.toastr.error('Hiba! A foglalás sikertelen!');
@@ -126,8 +129,8 @@ success!:any;
           }
         });
 
-      
-      
+
+
       }
 }
 

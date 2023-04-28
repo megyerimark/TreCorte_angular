@@ -1,26 +1,26 @@
 
 
- 
+
 
 
 footer{
     background-image: url("/assets/fo.jpg");
     background:cover;
    }
-   
-   
-   
-   
+
+
+
+
    .footerCont{
      width: 100%;
      padding: 70px 30px 20px;
-   
+
    }
    .socailIcons{
      display: flex;
      justify-content: center;
    }
-   
+
    .socailIcons a{
      text-decoration: none;
      padding: 10px;
@@ -43,10 +43,10 @@ footer{
      justify-content: center;
      list-style-type: none;
    }
-   
+
    .footerNavv {
      margin: 30px 0 ;
-   
+
    }
    .footerNavv ul li{
      color:#2980b9;
@@ -71,7 +71,7 @@ footer{
      background: gray;
    }
    .footerBottom p {
-   
+
      color: white;
      // background: -webkit-linear-gradient(red, blue);
      // -webkit-background-clip: text;
@@ -83,12 +83,12 @@ footer{
      margin: 0px 5px;
      height: 13px;
    }
-   
+
    @media screen and (max-width: 700px){
      .footerNavv ul{
        flex-direction: column;
      }
-     
+
      .footerNavv ul li{
        width: 100%;
        text-align: center;

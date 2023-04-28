@@ -9,6 +9,7 @@
 
 
 
+
   <div class="reservations">
     <h1>Foglalj Most</h1>
     <form [formGroup]="form"  id="foglalas" (ngSubmit)="reservation()">
@@ -25,7 +26,7 @@
         <input type="email" formControlName="email"  placeholder="Email"/>
       </div>
       <div class="inputBox">
-        <input type="tel"   formControlName="tel_number" placeholder="+3630 123 4561" />
+        <input type="tel"   formControlName="tel_number" placeholder="06 30 123 4561" />
     </div>
       <div class="inputBox">
         <!-- <label>Vendégszám</label> -->
@@ -33,7 +34,7 @@
       </div>
       <div class="inputBox">
         <!-- <label >Foglalási dátum</label> -->
-        <input type="datetime-local" formControlName="res_date" />
+        <input type="datetime-local"  class="date "formControlName="res_date" />
       </div>
 
       <button type="submit">Foglalás</button>

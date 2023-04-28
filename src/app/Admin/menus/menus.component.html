@@ -1,46 +1,60 @@
 <app-admin-nav></app-admin-nav>
 
 
-<div class="box">
-  <input type="text" placeholder="Keresés" [(ngModel)]="actualMen">
-  <a href="">
-    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-    </svg>
-  </a>
-</div>
 
-<form [formGroup]="form" (ngSubmit)="uploadFile()">
-  <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
 
-  <input type="text" placeholder="név" formControlName="name" class="form-control" >
-  <input type="number" placeholder="ár" formControlName="price" class="form-control" >
-  <input type="text" placeholder="kategória" formControlName="category_id" class="form-control" >
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-  <input type="text"  class="form-control" placeholder="leírás" formControlName="description">
-  <div class="button mb-3 text-center">
-    <button id="button" class="btn btn-info" type="submit" >Felvétel</button>
+
+
+
+
+  <div class="box">
+    <input type="text" placeholder="Keresés" [(ngModel)]="actualMen">
+    <a href="">
+      <i class='bx bx-search-alt bx-rotate-180 bx-tada' style='color:#2d5f94'  ></i>
+    </a>
   </div>
-</form>
+
+  <form [formGroup]="form" (ngSubmit)="uploadFile()">
+    <input type="file" (change)="onFileChange($event)"  formControlName="image" class="form-control">
+
+    <input type="text" placeholder="név" formControlName="name" class="form-control" >
+    <input type="number" placeholder="ár" formControlName="price" class="form-control" >
+    <input type="text" placeholder="kategória" formControlName="category_id" class="form-control" >
+
+    <input type="text"  class="form-control" placeholder="leírás" formControlName="description">
+    <div class="button mb-3 text-center">
+      <button id="button" class="btn btn-info" type="submit" >Felvétel</button>
+    </div>
+  </form>
 
 
 
 
 
 
-  <div class="container" *ngFor = 'let menu of menus | menupipe:actualMen'>
-    <div class="card">
-      <td>
-        <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
-      </td>
-      <div class="imgBx" data-text="Megyeri">
-        <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
-        <td>Ár: {{menu.price}}</td><br>
-        <td>Név: {{menu.name}}</td><br>
-        <td>kategória neve  : {{menu.elnevez}}</td>
+    <div class="container" *ngFor = 'let menu of menus | menupipe:actualMen'>
+      <div class="card">
+        <td>
+          <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
+        </td>
+        <div class="imgBx" data-text="Megyeri">
+          <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
+          <td>Ár: {{menu.price}}</td><br>
+          <td>Név: {{menu.name}}</td><br>
+          <td>kategória neve  : {{menu.elnevez}}</td>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
+
+</body>
+</html>

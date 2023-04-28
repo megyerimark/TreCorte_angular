@@ -5,11 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 font-family: 'Righteous', cursive;
+
 }
 
-html{
-  background: url("/assets/fire.gif");
-}
+
 
 
 body{
@@ -19,6 +18,7 @@ body{
   align-items: center;
   min-height: 100vh;
   background: #eff0f4;
+  background: url("/assets/banner-bg.jpg");
 }
 
 .container{

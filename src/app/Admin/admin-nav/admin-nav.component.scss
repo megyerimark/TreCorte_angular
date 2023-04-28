@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
 *{
-  
+
    font-family: 'Castoro Titling', cursive;
 
  }
+
+ #n{
+
+  line-height: 1.5;
+}
+ #a:hover{
+  border-radius:  15px;
+  display: flex;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25); /* árnyék tulajdonságok */
+  border: 2px solid #6da5c0; /* keret tulajdonságok */
+}
+.na{
+  background: url("/assets/banner-bg.jpg");
+}
