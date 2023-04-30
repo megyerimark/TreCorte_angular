@@ -16,65 +16,6 @@
 
 
 
-//   .navmenu{
-//     display: flex;
-//   }
-
-//   .navmenu a {
-//     padding: 10px 20px;
-//     color: rgb(24, 27, 26);
-//     text-transform:capitalize ;
-//     font-weight: 500;
-//     transition: all .42s ease;
-//   }
-
-//   .navmenu a:hover{
-//     color: red;
-//   }
-
-
-//   .nav-icon{
-//     display: flex;
-//     align-items: center;
-
-//   }
-
-// .nav-icon .btn{
-//   display: inline-block;
-//   text-transform: capitalize;
-//   font-size: 16px;
-//   font-weight: 500;
-//   border: 2px solid red;
-//   padding: 10px 30px;
-//   background-color: red;
-//   border-radius: 30px;
-//   color: white;
-//   letter-spacing: 1px;
-//   margin-right: 15px;
-//   transition: all .42s ease;
-// }
-
-
-
-// .nav-icon .btn:hover{
-//   transform:scale(1.1);
-// }
-
-
-
-// #menu-icon{
-//   font-size: 35px;
-//   color: black;
-//   z-index: 1001;
-//   cursor: pointer;
-
-//}
-
-
-
-
-
-
 
 
 
@@ -119,30 +60,88 @@
  }
 
 
- .chefs{
+ .varga, .varga1 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  overflow-x: scroll;
-  scrollbar-color: blue; /* thumb color, track color */
-  scrollbar-width: thin; /* scrollbar width */
+}
+
+
+.chefs .varga1 span{
+  border: 2px solid gold;
+  border-radius: 12px;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  display: block; /* A szöveg blokkra állítása, hogy teljes szélességben jelenjen meg a kép mellett */
+  overflow: hidden; /* A szöveg magasságát az img magasságához igazítja */
+
+}
+.chefs .varga span{
+  border: 2px solid gold;
+  border-radius: 12px;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  display: block; /* A szöveg blokkra állítása, hogy teljes szélességben jelenjen meg a kép mellett */
+  overflow: hidden; /* A szöveg magasságát az img magasságához igazítja */
+
+}
+.chefs .varga {
+  display: block;
+  overflow: hidden;
+  margin-top: -10px; /* A szöveg pozíciójának beállítása a kép közepétől */;
+
+}
+.chefs .varga1 {
+  display: block;
+  overflow: hidden;
+  margin-top: -10px; /* A szöveg pozíciójának beállítása a kép közepétől */;
+
+}
+
+ .chefs .varga1 img{
+  display: flex;
+  padding: 25px;
+  margin-left: 2;
  }
  .chefs .varga img{
   display: flex;
   padding: 25px;
+  float: left; /* A kép balra kerül */
+  margin-right: 20px; /* Ezzel hagyunk egy kis helyet a szöveg és a kép között */
  }
+
  .chefs .varga img:hover{
  scale: (1.2);
  }
 
+
  h1{
+ // animation: color-change 5s ease-in-out infinite;
   margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 3rem;
 
  }
+
+
+
+// @keyframes color-change {
+//  0% {
+//    color: #ff69b4;
+//  }
+//  50% {
+//    color: #1e90ff;
+//  }
+//  100% {
+//    color: #ff69b4;
+//  }
+//}
  .chefs .varga  {
     display:inline-block ;
   align-items: center;
@@ -154,7 +153,7 @@
     background: url("/assets/banner-bg.jpg");
 
  }
- .menus{
+ .m .menus{
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -213,12 +212,12 @@
 
  .containerimg .card {
    flex: 0 0 auto;
-   margin-right: 10px;
+   margin-right: 25px;
 
  }
 
  .containerimg .card .imgBx {
-   width: 80px;
+   width: 250px;
    height: 150px;
 
    border-radius: 15px;
@@ -226,15 +225,287 @@
 
  .containerimg .card .imgBx img {
    width: 100%;
-   height: 100px;
+   height: 150px;
  }
 
  .m h2{
-   color: #5689c0;
+  font-size: 5rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #444;
+  font-style: italic;
+
+
  }
-//  .m{
-//   background: url("/assets/banner-bg.jpg");
-//  }
+
+.services{
+  margin-bottom: 13px;
+  // border-bottom: 2px solid #f0ad4e;
+  margin-top: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+h4{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  letter-spacing: 0.4rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: underline dashed;
+  font-style: italic;
+}
+
+.services .breakfat{
+  margin-top: 25px;
+  margin-left: 32px;
+  width: 380px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  background: url("/assets/breakfast.jpg");
+  background-size: cover;
+
+}
+.services .dinner{
+  margin-top: 25px;
+  margin-left: 32px;
+  width: 380px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  background: url("/assets/dinner.jpg");
+  background-size: cover;
+
+}
+.services .lunch{
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 380px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  background: url("/assets/lunch.jpg");
+  background-size: cover;
+
+}
+.services .special{
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 380px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  background: url("/assets/spec.jpg");
+  background-size: cover;
+
+}
+
+.services .breakfat .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.services .lunch .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.services .dinner .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.services .special .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.services .dinner:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.services .lunch:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.services .breakfat:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.services .special:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.breakfat h2 {
+
+  color: black;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+.special h2 {
+  color: black;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+.dinner h2 {
+  color: black;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+.lunch h2 {
+  color: black;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.services .breakfat .content p{
+  font-size:23px;
+  z-index: 1;
+  color: red;
+
+}
+.services .lunch .content p{
+  font-size:23px;
+  z-index: 1;
+  color: red;
+
+}
+.services .special .content p{
+  font-size:23px;
+  z-index: 1;
+  color: red;
+
+}
+.services .dinner .content p{
+  font-size:23px;
+  z-index: 1;
+  color: red;
+
+}
+
+.services .breakfat:hover  h2{
+  display: none;
+
+}
+.services .special:hover  h2{
+  display: none;
+
+}
+.services .dinner:hover  h2{
+  display: none;
+
+}
+.services .lunch:hover  h2{
+  display: none;
+
+}
+
 
 
 
@@ -341,208 +612,6 @@
   display: flex;
 
  }
-//  .about .lorem, .elerhetoseg .lorem {
-//     display: flex;
-//     border: 2px solid gold;
-//     border-radius: 12px;
-//     margin-bottom: 12px;
-
-
-
-// }
-//  .about h1, .elerhetoseg h1 {
-//   display:flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: 15px;
-
-// }
-
-
-
-
-//  .reservations{
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-//    height: 75vh;
-//    background: url("/assets/res.jpg");
-//  }
-//  .reservations  h1{
-//    justify-content: center;
-//    align-items: center;
-//    color: #fff;
-//    margin-bottom: 150px;
-//  }
-//  .reservations form   {
-//    display: flex;
-//    flex-direction:column;
-//    justify-content: center;
-//    align-items: center;
-//    margin: 0 0 0 0px; /* A margin jobbra irányuló értéke 650px */
-//    padding: 15px;
-//    font-size: 12px;
-//    margin-top: 15px;
-//    font-weight: bold;
-
-//  }
-
-//  .reservations h1{
-//    position: absolute;
-//    margin-bottom: 500px;
-
-//  }
-
-
-//  .reservations form .inputBox {
-//     position: relative;
-//    margin: 20px 0 ;
-//  }
-//  .reservations form .inputBox input{
-
-//      width: 320px;
-//      height: 40px;
-//      font-size: 16px;
-//      color: white;
-//      padding: 0 10px ;
-//      background: transparent;
-//      border: 1.2px solid white;
-//      outline: none;
-//      border-radius: 5px;
-//      align-items: center;
-//      justify-content: center;
-//      font-size: 15px;
-//      border-radius: 10px;
-//      height: 30px;
-//      width: 250px;
-
-//    }
-
-
-
-
-//    .reservations form .inputBox input::placeholder{
-//      color:#384358;
-//    }
-
-
-
-//  .reservations button{
-//    display: inline-block;
-//    padding: 12px 28px;
-//    font-size: 18px;
-//    font-weight: 600;
-//    color: #ffffff;
-//    background-color: #3498db;
-//    border: none;
-//    border-radius: 50px;
-//    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-//    text-align: center;
-//    text-decoration: none;
-//    cursor: pointer;
-//    transition: background-color 0.3s ease;
-//  }
-//  .reservations button:hover{
-//    background-color: #2980b9;
-
-//  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  footer{
-//   background-image: url("/assets/fo.jpg");
-//   background:cover;
-//  }
-
-
-
-
-//  .footerCont{
-//    width: 100%;
-//    padding: 70px 30px 20px;
-
-//  }
-//  .socailIcons{
-//    display: flex;
-//    justify-content: center;
-//  }
-
-//  .socailIcons a{
-//    text-decoration: none;
-//    padding: 10px;
-//    margin: 10px;
-//    border-radius: 50px;
-//  }
-//  .socailIcons a svg {
-//    font-size: 4em;
-//    opacity: 0.9;
-//  }
-//  .socailIcons a:hover{
-//    transition: 0.5s;
-//  }
-//  .socailIcons a:hover svg{
-//    color: #2980b9;
-//    transition: 0.5s;
-//  }
-//  .footerNavv ul {
-//    display: flex;
-//    justify-content: center;
-//    list-style-type: none;
-//  }
-
-//  .footerNavv {
-//    margin: 30px 0 ;
-
-//  }
-//  .footerNavv ul li{
-//    color:#2980b9;
-//    margin: 20px;
-//    text-decoration: none;
-//    font-size: 1.3em;
-//    opacity: 0.7;
-//    transition: 0.5s;
-//  }
-//  .footerNavv ul li a {
-//    background: -webkit-linear-gradient(#3498db, #2980b9);
-//    -webkit-background-clip: text;
-//    -webkit-text-fill-color: transparent;
-//  }
-//  .footerNavv ul li a:hover{
-//    opacity: 1;
-//    color: #2980b9;
-//  }
-//  .footerBottom{
-//    padding:20px;
-//    text-align: center;
-//    background: gray;
-//  }
-//  .footerBottom p {
-
-//    color: white;
-//     background: -webkit-linear-gradient(red, blue);
-//     -webkit-background-clip: text;
-//    -webkit-text-fill-color: transparent;
-//    text-transform: uppercase;
-//    opacity: 0.7;
-//    letter-spacing: 1px;
-//    font-weight: 400;
-//    margin: 0px 5px;
-//    height: 13px;
-//  }
-
  @media screen and (max-width: 700px){
     .footerNavv ul{
       flex-direction: column;
@@ -559,6 +628,7 @@
       text-align: center;
       margin: 10px;
     }
+
     .countdown {
       width: 50%;
       clear: both;
@@ -587,11 +657,34 @@
    header img{
     display: none;
    }
+   .services > div {
+    width: 100%;
+    align-items: center;
+    justify-content:  center;
+  }
+  .services{
+    display: flex;
+    margin-left: -32px;
+  }
 
   }
 
 
 
+  @media screen and (min-width: 800){
+    .containerimg .card {
+      flex: 0 0 auto;
+      margin-right: 10px;
+
+    }
+    .services .breakfat{
+
+      display: none;
+
+
+    }
+
+  }
    @media screen and (max-width: 375px){
      .reservations h1{
        opacity: 0;
