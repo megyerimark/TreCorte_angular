@@ -102,19 +102,24 @@
 
 }
 
- .chefs .varga1 img{
-  display: flex;
-  padding: 25px;
-  margin-left: 2;
- }
  .chefs .varga img{
   display: flex;
   padding: 25px;
   float: left; /* A kép balra kerül */
   margin-right: 20px; /* Ezzel hagyunk egy kis helyet a szöveg és a kép között */
  }
+ .chefs .varga1 img{
+  display: flex;
+  padding: 25px;
+  float: right; /* A kép jobbra kerül */
+  margin-right: 20px; /* Ezzel hagyunk egy kis helyet a szöveg és a kép között */
+ }
 
  .chefs .varga img:hover{
+ scale: (1.2);
+ }
+
+ .chefs .varga1 img:hover{
  scale: (1.2);
  }
 
@@ -126,6 +131,16 @@
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+
+ }
+ strong{
+ // animation: color-change 5s ease-in-out infinite;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-decoration: underline;
 
  }
 
@@ -159,7 +174,7 @@
    justify-content: space-between;
    align-items: center;
    overflow-x: scroll;
-   scrollbar-color: blue; /* thumb color, track color */
+   scrollbar-color: gold; /* thumb color, track color */
    scrollbar-width: thin; /* scrollbar width */
 
 
@@ -177,14 +192,14 @@
 
  /* Handle */
  ::-webkit-scrollbar-thumb {
-   background: linear-gradient(45deg,#5689c0, #75e2ff );
+  background-color: gold;
    border-radius: 10px;
  }
 
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-     background: #b30000;
-   }
+  // ::-webkit-scrollbar-thumb:hover {
+  //    background: #b30000;
+  //  }
 
 
  h2{
@@ -689,6 +704,12 @@ h4{
      .reservations h1{
        opacity: 0;
 
+     }
+     .chefs .varga img{
+      display: none;
+     }
+     .chefs .varga1 img{
+      display: none;
      }
 
    }
