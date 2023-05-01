@@ -9,13 +9,12 @@
 
 
 
-
   <div class="reservations">
     <h1>Foglalj Most</h1>
     <form [formGroup]="form"  id="foglalas" (ngSubmit)="reservation()">
       <div class="inputBox">
+        <input type="text" formControlName="first_name" placeholder="Vezetéknév" class="form-controll"/>
         <!-- <label>Vezetéknév</label> -->
-        <input type="text" formControlName="first_name" placeholder="Vezetéknév"/>
       </div>
       <div class="inputBox">
         <!-- <label>Keresztnév</label> -->

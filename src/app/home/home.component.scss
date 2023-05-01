@@ -482,30 +482,31 @@ h4{
 .services .breakfat .content p{
   font-size:23px;
   z-index: 1;
-  color: red;
+  color: #92400e;
 
 }
 .services .lunch .content p{
   font-size:23px;
   z-index: 1;
-  color: red;
+  color: #92400e;
 
 }
 .services .special .content p{
   font-size:23px;
   z-index: 1;
-  color: red;
+  color: #92400e;
 
 }
 .services .dinner .content p{
   font-size:23px;
   z-index: 1;
-  color: red;
+  color: #92400e;
 
 }
 
 .services .breakfat:hover  h2{
   display: none;
+  background: black;
 
 }
 .services .special:hover  h2{
@@ -518,6 +519,22 @@ h4{
 }
 .services .lunch:hover  h2{
   display: none;
+
+}
+.services .breakfat:hover{
+  background: #fed7aa;
+
+}
+.services .special:hover{
+  background: #fed7aa;
+
+}
+.services .dinner:hover{
+  background: #fed7aa;
+
+}
+.services .lunch:hover{
+  background: #fed7aa;
 
 }
 
