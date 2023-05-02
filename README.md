@@ -38,7 +38,7 @@ vagy
 ng s 
 ```
 
->>>Ha az ng s választjuk akko nekünk kell majd begépelni a keresősávba a következőt . 
+>>>Ha az ng s választjuk akkor nekünk kell majd begépelni a keresősávba a következőt . 
 
 ```
 http://localhost:4200/
