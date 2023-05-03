@@ -7,6 +7,18 @@ font-family: 'Righteous', cursive;
 body{
   background: url("/assets/banner-bg.jpg");
 }
+head{
+  background: url("/assets/banner-bg.jpg");
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
 
 .box{
   height: 30px;
@@ -34,16 +46,16 @@ body{
 }
 
 
-@media screen and (max-width: 700px){
+// @media screen and (max-width: 700px){
 
-  .box input{
-    width:80px;
-    font-weight: 500;
-    transition: 0.8s;
-    background: transparent;
-}
+//   .box input{
+//     width:80px;
+//     font-weight: 500;
+//     transition: 0.8s;
+//     background: transparent;
+// }
 
-}
+// }
 //    @media screen and (max-width: 700px){
 //      .footerNavv ul{
 //        flex-direction: column;

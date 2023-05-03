@@ -10,10 +10,6 @@
 </head>
 <body>
 
-
-
-
-
   <div class="box">
     <input type="text" placeholder="Keresés" [(ngModel)]="actualMen">
     <a href="">
@@ -34,24 +30,46 @@
     </div>
   </form>
 
+ 
 
-
-
-
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let menu of menus | menupipe:actualMen">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]='"http://localhost:8000/storage/images/"+menu.image'class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Név: {{menu.name}}</h5>
+                <p class="card-text">kategória: {{menu.elnevez}}</p>
+                <p class="card-text"><small class="text-body-secondary">Ár: {{menu.price}}</small></p>
+                <span> <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 
 
     <div class="container" *ngFor = 'let menu of menus | menupipe:actualMen'>
       <div class="card">
-        <td>
-          <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
-        </td>
         <div class="imgBx" data-text="Megyeri">
           <img [src]='"http://localhost:8000/storage/images/"+menu.image' alt="" class="image" height="15px">
+         
           <td>Ár: {{menu.price}}</td><br>
           <td>Név: {{menu.name}}</td><br>
           <td>kategória neve  : {{menu.elnevez}}</td>
         </div>
+        <td>
+          <button  class="btn btn-info" (click)="Delete(menu.id)">Törlés</button>
+        </td>
       </div>
-    </div>
+    </div> -->
 
 
 
