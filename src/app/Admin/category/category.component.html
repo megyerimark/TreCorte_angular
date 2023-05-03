@@ -1,20 +1,5 @@
 
 <app-admin-nav></app-admin-nav>
-
-    <!-- <div class="container" *ngFor = 'let category of categories'>
-      <div class="card">
-        <td>
-          <button  class="btn btn-info" (click)="Delete(category.id)">Törlés</button>
-        </td>
-        <div class="imgBx" data-text="Megyeri">
-          <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image" height="150px">
-          <td>{{category.description}}</td>
-        </div>
-      </div>
-    </div>
-   -->
-
-
 <html lang="hu">
 
 <head>
@@ -47,18 +32,32 @@
 
 
 
-    <div class="container" *ngFor = 'let category of categories | catpipe:actualCat' >
-      <div class="mycard">
-        <div class="cimg">
-          <img [src]='"http://localhost:8000/storage/images/"+category.image' alt="" class="image" >
-        </div>
-         <div class="cdetail">
-        <p>{{category.description}}</p>
-      </div>
 
-      <button (click)="Delete(category.id)">Törlés</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 " *ngFor = 'let category of categories | catpipe:actualCat' >
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4 ">
+              <img [src]='"http://localhost:8000/storage/images/"+category.image' class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">kategória név: {{category.name}}</h5>
+                <p class="card-text">leírás: {{category.description}}</p>
+                <p class="card-text"><small class="text-body-secondary">??</small></p>
+                <span> <button  class="btn btn-info" (click)="Delete(category.id)">Törlés</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+
+  
+  
+
 
 </body>
 

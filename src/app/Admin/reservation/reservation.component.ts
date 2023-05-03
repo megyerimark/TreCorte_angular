@@ -14,6 +14,8 @@ import Swal from 'sweetalert2';
 export class ReservationComponent {
 
   currentUser: any;
+  email!: boolean | string	
+
 
 
   form!:FormGroup;

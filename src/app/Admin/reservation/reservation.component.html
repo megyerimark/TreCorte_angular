@@ -22,7 +22,7 @@
       </div>
       <div class="inputBox">
         <!-- <label>Email</label> -->
-        <input type="email" formControlName="email"  placeholder="Email"/>
+        <input type="email" name="email" ngModel [email]="true" formControlName="email"  placeholder="Email"/>
       </div>
       <div class="inputBox">
         <input type="tel"   formControlName="tel_number" placeholder="06 30 123 4561" />

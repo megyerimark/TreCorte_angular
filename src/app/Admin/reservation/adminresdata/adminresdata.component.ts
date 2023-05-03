@@ -81,7 +81,7 @@ show = true;
     this.reservationServ.update(res, currentUser.token).subscribe({
       next:res => {
         this.toastr.success('Sikeres módosítás');
-        this.show = false;
+        this.form.reset();
         this.index();
         //$('#exampleModal').modal('hide');
       },

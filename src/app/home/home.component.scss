@@ -362,6 +362,9 @@ h4{
   opacity: 0;
   transition: 0.5s;
 }
+.services .special .content p::selection {
+  background-color: pink;
+}
 
 .services .dinner:hover .content {
   transform: translateY(0px);
